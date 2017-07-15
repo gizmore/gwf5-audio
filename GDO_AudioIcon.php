@@ -8,8 +8,9 @@ final class GDO_AudioIcon extends GDO_Icon
 	public function path(string $path) { $this->path = $path; return $this; }
 	public function file(GWF_File $file) { return $this->path($file->getPath()); }
 	
-	public $stereo = true;
+	public $stereo = false;
 	public function mono() { $this->stereo = false; return $this; }
+	public function stereo(bool $stereo=true) { $this->stereo = $stereo; return $this; }
 	
 	public $flat = false;
 	public function flat(bool $flat=true) { $this->flat = $flat; return $this; }
